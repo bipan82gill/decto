@@ -18,9 +18,13 @@ hr{
     width:90%;
     align-items: center;
 }
-.list-unstyled{
+.list-unstyled {
     list-style: none;
+}
+.list-unstyled a{
     
+    text-decoration: none;
+    color:white;
     
 }
 .list-unstyled li{

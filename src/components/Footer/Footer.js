@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Footer.css'
 import {GoLocation}  from 'react-icons/go';
 
@@ -31,13 +32,13 @@ const Footer =()=>{
                     </div>
                     {/* col-3 */}
                     <div className="col">
-                   
+                    
                         <h2>Quick Links</h2>
                         <ul className="list-unstyled">
-                            <li>About Us</li>
-                            <li>Services</li>
-                            <li>Projects</li>
-                            <li>Contact-us</li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/services">Services</Link></li>
+                            <li><Link to="/contactus">Contact Us</Link></li>
                         </ul>
                       
                     </div>
