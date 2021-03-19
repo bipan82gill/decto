@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop'; 
-
+// import {BwrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home';
 class App extends Component {
   state={
     sideDrawerOpen:false
@@ -24,13 +26,16 @@ class App extends Component {
      backdrop = <Backdrop click={this.backdropClickHandler}/>
    }
   return (
-    <div className="App">
+    <div className="page-conatiner">
+      <div className="content-wrap">
       <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
       <SideDrawer show={this.state.sideDrawerOpen}/>
       {backdrop}
       <main style={{ marginTop:'65px'}}>
-        <p> hello  from Decrto </p>'
+        <Home/>
       </main>
+      </div>
+      <Footer/>
     </div>
   );
 }
